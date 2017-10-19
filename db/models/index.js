@@ -6,3 +6,19 @@
 	// This is an acceptable pattern but it does have limitations in that if you change the name of the model you will have to change every time it is required everywhere
 
 // This is also probably a good place for you to set up your associations
+
+const db = require('../');
+const Student = require('./student');
+const Campus = require('./campus');
+
+Student.belongsTo(Campus, {
+	foreignKeyConstraint: true,
+	onDelete: 'cascade'
+});
+// Campus.hasMany(Student, { onDelete: 'cascade' })
+
+module.exports = {
+  db,
+	Student,
+	Campus
+};
