@@ -6,6 +6,7 @@ function EditCampus(props) {
   const { id, name, image } = props.selectedCampus;
   const { selectedCampus, updateCampus, deleteCampus, reloadSelectedCampus } = props;
 
+  // if selectedCampus hasn't loaded in the store reload it
   selectedCampus.hasOwnProperty('id') || reloadSelectedCampus(+props.match.params.campusId);
 
   return (

@@ -7,6 +7,7 @@ import { Student } from './';
 function CampusProfile(props) {
   const { id, name, image } = props.selectedCampus;
 
+  // if selectedCampus hasn't loaded in the store reload it
   props.selectedCampus.hasOwnProperty('id') || props.reloadSelectedCampus(+props.match.params.campusId);
 
   return (

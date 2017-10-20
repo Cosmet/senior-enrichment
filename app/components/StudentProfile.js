@@ -7,6 +7,7 @@ function StudentProfile(props) {
   const { campus, student, reloadSelectors } = props;
   const { id, name, email, image } = student;
 
+  // if selectedStudent hasn't loaded in the store reload it and grab the associated campus
   student.hasOwnProperty('id') || reloadSelectors(+props.match.params.studentId)
 
   return (
