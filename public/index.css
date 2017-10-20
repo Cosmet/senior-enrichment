@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Indie+Flower');
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -345,6 +345,7 @@ div.student-profile > p:nth-child(2) > a:hover {
 
 
 .polaroid-images a {
+  font-family: 'Indie Flower', 'Montserrat', sans-serif;
 	background: white;
 	display: inline;
 	float: left;
